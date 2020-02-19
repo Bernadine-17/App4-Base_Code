@@ -47,10 +47,10 @@ blah, blah, blah, blah
         }
 	
 	function results(){
-		var headachePercent = allergy_count/ (allergy_count + cold_count) * 100;
-		var concussionPercent = cold_count/ (allergy_count + cold_count) * 100;
+		var headachePercent = headache_count/ (headache_count + concussion_count) * 100;
+		var concussionPercent = headache_count/ (headache_count + concussion_count) * 100;
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is just a headache=" + allergyPercent + "%<br> Probability it is a concussion=" + coldPercent;
+		resultText.innerHTML = "Probability it is just a headache=" + headachePercent + "%<br> Probability it is a concussion=" + concussionPercent + "%";
 	}	
 
   </script>
