@@ -6,8 +6,8 @@ THIS CODE SHOULD NOT BE USED TO DIAGNOSE ANY KIND OF MEDICAL CONDITION.
  
  
 Authors in chronological order of contribution:
-Author 1
-Author 2
+Tim Riedel
+Bernadine Decapia
  
 Further Information:
 http://diystream.cns.utexas.edu/
@@ -17,10 +17,10 @@ Timothy Riedel
 triedel@utexas.edu
  
 Brief Description of Goal of Code:
-blah, blah, blah,
+The goal of the code is to diagnose whether or not a person has an actual concussion by utilizing some of its symptoms to diagnose.
  
 Known Issues:
-blah, blah, blah, blah
+The footer of each of the webpages doesn't appear except for the results processing page.
 -->
 	
    <head> 
@@ -34,11 +34,11 @@ blah, blah, blah, blah
 
 <script>
         var headache_count = 0;
-        var concussion_count = 0;
+        var false_count = 0;
 
 
-        function headacheAdd(){
-            headache_count = headache_count + 1;
+        function falseAdd(){
+            false_count = false_count + 1;
 
         }
 
@@ -47,10 +47,10 @@ blah, blah, blah, blah
         }
 	
 	function results(){
-		var headachePercent = headache_count/ (headache_count + concussion_count) * 100;
-		var concussionPercent = headache_count/ (headache_count + concussion_count) * 100;
+		var falsePercent = false_count/ (false_count + concussion_count) * 100;
+		var concussionPercent = concussion_count/ (false_count + concussion_count) * 100;
 		var resultText = document.getElementById("results");
-		resultText.innerHTML = "Probability it is just a headache=" + headachePercent + "%<br> Probability it is a concussion=" + concussionPercent + "%";
+		resultText.innerHTML = "Probability it is not a false alarm=" + falsePercent + "%<br> Probability it is a concussion=" + concussionPercent + "%";
 	}	
 
   </script>
@@ -101,7 +101,7 @@ blah, blah, blah, blah
     	<div id="content" class="w3-container">
         	<p>Have you had traumatic injury to the head?</p>
 			<a href="#two"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#two"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
+         		<a href="#two"  onclick="falseAdd();" class="w3-btn w3-black">No</a>
  	</div>
 
 </div>
@@ -114,7 +114,7 @@ blah, blah, blah, blah
 	<div id="content" class="w3-container">
 		<p>Do you feel dizzy, foggy, or have difficulty remembering?</p>
 			<a href="#three"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#three"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
+         		<a href="#three"  onclick="falseAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 	
@@ -126,7 +126,7 @@ blah, blah, blah, blah
 	<div id="content" class="w3-container">
 		<p>Do you have sensitivity to light and/or noise?</p>
 			<a href="#four"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#four"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
+         		<a href="#four"  onclick="falseAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 	
@@ -138,7 +138,7 @@ blah, blah, blah, blah
 	<div id="content" class="w3-container">
 		<p>Do you feel more irritated, angry, or emotional in general?</p>
 			<a href="#five"  onclick="concussionAdd();" class="w3-btn w3-black"> Seasonal</a>
-         		<a href="#five"  onclick="headacheAdd();" class="w3-btn w3-black">Chronic</a>
+         		<a href="#five"  onclick="falseAdd();" class="w3-btn w3-black">Chronic</a>
 	</div>
 </div>
 	
@@ -150,7 +150,7 @@ blah, blah, blah, blah
 	<div id="content" class="w3-container">
 		<p>Do you feel numbness/tingling in any part of your body?</p>
 			<a href="#six"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#six"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
+         		<a href="#six"  onclick="falseAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 	
@@ -162,7 +162,7 @@ blah, blah, blah, blah
 	<div id="content" class="w3-container">
 		<p>Do you feel fatigued?</p>
 			<a href="#seven"  onclick="concussionAdd();" class="w3-btn w3-black"> Yes</a>
-         		<a href="#seven"  onclick="headacheAdd();" class="w3-btn w3-black">No</a>
+         		<a href="#seven"  onclick="falseAdd();" class="w3-btn w3-black">No</a>
 	</div>
 </div>
 	
