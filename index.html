@@ -27,7 +27,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 -->
 	
    <head> 
-      <title>Hello World</title>  
+      <title>DIY Diagnostics</title>  
       <meta name="viewport" content="width=device-width, initial-scale=1">
       <meta name="apple-mobile-web-app-capable" content="yes">
       <link rel="stylesheet" href="w3.css">
@@ -121,8 +121,10 @@ img, object{
  	</div>
 
 </div>
+
 <!--the structure of the first webpage was copied and pasted to make it easier and more consistent between the five other different webpages. The two buttons are attached to either the fluAdd or poisonAdd function that will keep tally of how many times a symptom of either is picked. -->
 <!--from the previous app, I changed the button color to red and green to make it more appealing instead of just having black buttons. -->
+
 <div class="page" id="two">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 2</h1>
@@ -137,7 +139,7 @@ img, object{
 	</div>
 </div>
 
-<!--I had to switch the coldAdd and allergyAdd function because the fever symptom is actually associated with the cold, not allergies. -->
+<!--I had to switch the poisonAdd and fluAdd function because this particular conditiion is actually associated with the food poisoning, not the stomach flu. -->
 	
 <div class="page" id="three">
 	<div class="w3-container w3-flat-carrot">
@@ -150,7 +152,9 @@ img, object{
          		<a href="#four"  onclick="poisonAdd();" class="w3-btn w3-red">No</a>
 	</div>
 </div>
-<!--It is a similar structure to the previous question so I didn't really have to change anythiing except for the question number, the question, and the page that it should refer to next after the button is clicked. -->	
+	
+<!--It is a similar structure to the previous question so I didn't really have to change anythiing except for the question number, the question, and the page that it should refer to next after the button is clicked. -->
+	
 <div class="page" id="four">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Question 4</h1>
@@ -162,7 +166,8 @@ img, object{
          		<a href="#five"  onclick="poisonAdd();" class="w3-btn w3-red">No</a>
 	</div>
 </div>
-<!--Here, I switched allergyAdd and coldAdd again and changed the name of the buttons to Seasonal and Chronic because of the relevance to the question. It is not a yes or no question so I had to change the structure of the buttons. -->
+	
+<!--For this question, the stomach flu is more infectious than food poisoning because it's an actual viral infection that happens in the gastrointestinal system that can spread through bodily fluids -->
 	
 <div class="page" id="five">
 	<div class="w3-container w3-flat-carrot">
@@ -175,7 +180,8 @@ img, object{
          		<a href="#six"  onclick="poisonAdd();" class="w3-btn w3-red">No</a>
 	</div>
 </div>
-<!--I switched the coldAdd and allergyAdd function to make it fit the context of the question. -->
+	
+<!--This symptom could apply to either but it is more common in the stomach flu than it is in food poisoning just because it is a viral infection in the gastrointestinal system which would later impact other systems in the body -->
 	
 <div class="page" id="six">
 	<div class="w3-container w3-flat-carrot">
@@ -188,27 +194,37 @@ img, object{
          		<a href="#seven"  onclick="poisonAdd();" class="w3-btn w3-red">No</a>
 	</div>
 </div>
+	
 <!--The last two questions were the same structure so all I had to change where the href values and the id of the webpage.-->
 	
 <div class="page" id="seven">
+	<div class="w3-container w3-flat-carrot">
+		<h1>Results Processing</h1>
+	</div>
+	
+	<div id="content" class="w3-container">
+		<a href="#eight" onclick="results();" class="w3-btn w3-black">Click here to view results</a>	
+	</div>
+</div>
+
+<div class="page" id="eight">
 	<div class="w3-container w3-flat-carrot">
 		<h1>Your Results!</h1>
 	</div>
 	
 	<div id="content" class="w3-container">
-		<a  onclick="results();" class="w3-btn w3-black">Click here to view results</a>
-		<p id="results"></p>
+		<p id="results"></p>	
 	</div>
 </div>
 	
-<!--I condensed the results pages into one. The button would calculate and display the results at the same time.-->
+<!--I changed something from my previous code and made 2 separate pages for the results. This part was just to clean how it showed the results because before, the button to show the results would stay and it looked super informal.-->
 <!--the onclick"results();" function would calculate all the percentages. The id="results" part would replace the html text in the body with whatever the program calculated for the results. -->
 
 <footer class="w3-bottom w3-container w3-flat-carrot">
 	<p>Bernadine's Diagnostic - DIY!</p>
 </footer>
-		
-<!-- This footer should be consistent across all webpages. However, I did not tweak this part of the code and after I added the last two webpages, the DIY footer disappeared, and it seems to be a glitch or something because it won't show up anymore except for maybe a couple of webpages. -->
+
+<!--This footer should be present in all the webpages!-->
 		
 </body>
 </html>
