@@ -36,6 +36,11 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+var docMod = document.lastModified; // loads last modified time stamp into docMod variable
+alert("This file last modified " + docMod); // generates alert box with time stamp. If annoying, comment out this entire line.
+console.log("This file last modified " + docMod); // generates message in javaScript console (found in developers tools) with time stamp. 
+	
+	
         var flu_count = 0;
         var poison_count = 0;
 //these two variables will reset both counts to zero every time the program is started. It ensures that the program will run the correct calculation when it shows the probability in the results page.
